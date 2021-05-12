@@ -15,11 +15,11 @@ export default function LetestBLog(props) {
     const articledata=props.article
     return (
         <>
-            {/*<Box display="flex" flexDirection="row-reverse" p={1} m={1}>*/}
-            {/*    <Button variant="outlined" className={styles.button_view_all} >*/}
-            {/*        View All*/}
-            {/*    </Button>*/}
-            {/*</Box>*/}
+
+                <Button variant="outlined" className={styles.button_view_all} >
+                    View All
+                </Button>
+
 
             {
                 articledata && articledata.length && articledata.map((data,i)=>{

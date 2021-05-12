@@ -79,6 +79,13 @@ export default function Navbar() {
                        </Link>
                    </ListItem>
                    <ListItem button>
+                       <ListItemIcon><HomeIcon style={{color:'#fff'}}/></ListItemIcon>
+                       <Link href={'/home'}><a>
+                           <ListItemText primary="Home2" />
+                       </a>
+                       </Link>
+                   </ListItem>
+                   <ListItem button>
                        <ListItemIcon><VideoLibraryIcon style={{color:'#fff'}} /></ListItemIcon>
                        <Link href={'/lecture'}><a>
                            <ListItemText primary="Lecture " />
