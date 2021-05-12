@@ -298,6 +298,16 @@
 
   }
 
+  .home_booksection {
+    background-color: #fff;
+    padding: 40px 0px 0px 10px;
+  }
+  .home_organization_section{
+    background-color: #FFFFFF;
+    padding: 60px 0px;
+
+  }
+
 
 }
 

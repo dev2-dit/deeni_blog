@@ -18,12 +18,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         boxShadow:'none',
     },
-    paper: {
-        padding:'30px 40px',
-        textAlign: 'left',
-        color: theme.palette.text.secondary,
 
-    },
 }));
 
 
@@ -39,7 +34,7 @@ export default function viewLecture(){
             <Container >
                 <Grid container spacing={3} className={styles.lectures}>
                     <Grid item xs={12} sm={12}>
-                        <Paper className={classes.paper}>
+                        <Paper className={styles.paper}>
                         <Grid container spacing={3} >
                             <Grid item xs={12}>
                                    <div className={styles.videoframe}>

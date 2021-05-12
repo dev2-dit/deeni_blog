@@ -30,7 +30,7 @@ export  default function Menubar(){
                 <Container>
                 {isMatches ? <Navbar/> :
                     <Toolbar>
-                        <Link href="/">
+                        <Link href="/">z
                             <a><Image
                                 src="/images/logo2.png"
                                 alt="Picture of the author"

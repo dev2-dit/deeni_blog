@@ -137,25 +137,22 @@ export default function TopAppBar() {
         </div>
     );
     return (
-        <div>
             <AppBar position="static">
                 <Container>
                 <Toolbar>
                     <IconButton edge="start"  color="inherit" aria-label="menu" >
 
-                        {['left'].map((anchor) => (
-                            <React.Fragment key={anchor}>
-                                <MenuIcon onClick={toggleDrawer(anchor, true)}/>
+                            <React.Fragment>
+                                <MenuIcon onClick={toggleDrawer('left', true)}/>
                                 <SwipeableDrawer
-                                    anchor={anchor}
-                                    open={state[anchor]}
-                                    onClose={toggleDrawer(anchor, false)}
-                                    onOpen={toggleDrawer(anchor, true)}
+                                    anchor={'left'}
+                                    open={state['left']}
+                                    onClose={toggleDrawer('left', false)}
+                                    onOpen={toggleDrawer('left', true)}
                                 >
-                                    {list(anchor)}
+                                    {list('left')}
                                 </SwipeableDrawer>
                             </React.Fragment>
-                        ))}
                     </IconButton>
 
                     <Typography variant="h6" className={styles.menuitem}>
@@ -197,6 +194,6 @@ export default function TopAppBar() {
                 </Toolbar>
                 </Container>
             </AppBar>
-        </div>
+
     );
 }

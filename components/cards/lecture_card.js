@@ -27,7 +27,7 @@ export default function LectureCard(props){
                     <Typography variant="body2" className={styles.blog_tag}>
                         549 views
                     </Typography>
-                    <Link href={`lecture/${data.id}`}>
+                    <Link href={`/lecture/${data.id}`}>
                         <a>
                             <Typography component="h5" className={styles.blog_title}>
                                {data.name}

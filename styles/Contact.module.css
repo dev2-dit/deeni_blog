@@ -32,12 +32,12 @@
 
 
     .textfield{
-        width:90% !important;
+        width:100% !important;
         margin: 16px 0px !important;
     }
 
     .textarea{
-        width:90% !important;
+        width:100% !important;
         margin: 16px 0px !important;
     }
 }
