@@ -1,32 +1,18 @@
-import Layout from '../../components/layout';
-import Meta from '../../components/meta';
-import LectureList from '../../components/lecture/lecture_category_list';
-import {getlecturs,getlecturcategory} from '../../actions/index';
 
-export default function AllLecture({ lectures,lecturecategories }) {
+import Layout from "../../components/base/layout";
+import Meta from "../../components/base/meta";
 
+
+export default function Home() {
     return (
         <Layout>
             <Meta
                 title="Lecture"
-                description="Blog Tempalte 2"
+                description="Blog Tempalte 2 - Lecture"
             />
-            <LectureList
-                lectures={lectures}
-                lecturecategories={lecturecategories}
-            />
+
+
         </Layout>
     )
-}
 
-
-export async function getStaticProps(context) {
-    const lectures = await getlecturs();
-    const lecturecategories = await getlecturcategory();
-    return {
-        props: {
-            lectures,
-            lecturecategories
-        },
-    }
 }
