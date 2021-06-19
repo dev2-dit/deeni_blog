@@ -14,6 +14,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import {Grid} from "@material-ui/core";
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import Image from "next/image";
 
 
 
@@ -31,7 +32,7 @@ export default function Navbar() {
 
     const classes = useStyles();
     const  [openDrawer,setOpenDrawer]=useState(false);
-    console.log(openDrawer,"Dsdsd");
+
 
     return(
 
@@ -42,16 +43,23 @@ export default function Navbar() {
                 <Grid container spacing={3}>
                     <Grid item xs={4} style={{display:'flex'}}>
                         <IconButton edge="start" onClick={()=>setOpenDrawer(!openDrawer)} >
-                            {openDrawer ? <ArrowUpwardIcon/> : <MenuIcon />  }
+                            {openDrawer ? <ArrowUpwardIcon/> :
+                                <div className="off-canvas-toggle hidden d-inline-block" id="off-canvas-toggle" style={{marginTop:'12px'}}>
+                                    <span></span>
+                                </div>
+                            }
                         </IconButton>
 
                         <Typography variant='body1' className="mobile-menuicon-text">Menu</Typography>
 
                     </Grid>
                     <Grid item xs={4} style={{display:'flex'}}>
-                            <Typography variant='h4' align='center'>
-                                <Link href="#"><a className="text-logo"> Athena </a></Link>
-                            </Typography>
+                        <Image
+                            src="/demoimage/logo.png"
+                            alt="blog_image"
+                            width={110}
+                            height={60}
+                        />
 
                     </Grid>
                     <Grid item xs={4} style={{display:'flex'}}>
@@ -65,18 +73,18 @@ export default function Navbar() {
             <Drawer anchor='top' open={openDrawer} onClose={()=>setOpenDrawer(false)} className={classes.root}>
                     <List>
                         <ListItem button>
-                            <Link href="/lecture">
+                            <Link href="/lectures">
                                 <a className="menu-items">Lecture</a>
                             </Link>
                         </ListItem>
                         <ListItem button>
-                            <Link href="/lecture">
+                            <Link href="/books">
                                 <a className="menu-items">Book</a>
                             </Link>
                         </ListItem>
                         <ListItem button>
-                            <Link href="/lecture">
-                                <a className="menu-items">Book</a>
+                            <Link href="/articles">
+                                <a className="menu-items">Article</a>
                             </Link>
                         </ListItem>
                     </List>

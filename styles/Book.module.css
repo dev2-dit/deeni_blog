@@ -1,0 +1,93 @@
+
+.all_books_section{
+    padding: 30px 25px !important;
+}
+
+.section_title {
+    color: #314AC4 !important;
+}
+.book_seperator {
+    width: 70px;
+    height: 1px;
+    background: #444;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.bookcardimage img{
+    border-radius:5px;
+}
+
+.bookinfo{
+    padding: 15px 15px;
+}
+
+.cardroot{
+    display:flex !important;
+    border:none !important;
+    box-shadow:1px 1px 1px 1px transparent !important;
+    border-radius:0 !important;
+    margin:20px 12px 40px 20px;
+}
+
+
+.all_books_show{
+    background-color: #ffffff !important;
+    margin-top:140px ;
+    border-radius: 15px;
+    padding:0px 15px;
+}
+
+
+
+.book_details_section {
+    background-color: #fff;
+    padding: 40px 0px 20px 20px;
+    border-radius: 15px;
+    margin: 0px 5px;
+}
+.book_contributors_name{
+    padding: 3px 0px;
+}
+.button_readbook{
+    background-color: transparent !important;
+    padding: 10px 25px !important;
+    margin-left: 25px !important;
+    color: #000 !important;
+    width:170px !important;
+    margin-top:10px !important;
+    margin-bottom: 10px !important;
+}
+
+.button_download{
+    background-color: #4663AC !important;
+    padding: 10px 25px !important;
+    margin-left: 25px !important;
+    color: #fff !important;
+    width: 170px !important;
+    margin-top:10px !important;
+    margin-bottom: 10px !important;
+}
+
+@media (max-width: 600px) {
+
+    .all_books_section{
+        padding: 30px 0px !important;
+    }
+    .bookinfo{
+        padding:5px 0px;
+    }
+
+
+    .book_details_section {
+        background-color: #fff;
+        padding: 40px 0px 20px 0px;
+    }
+
+    .all_books_show{
+        background-color: #ffffff !important;
+        margin-top:120px ;
+        border-radius: 15px;
+        padding:0px 15px;
+    }
+}

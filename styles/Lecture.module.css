@@ -1,0 +1,95 @@
+.lectures{
+    padding: 30px 25px;
+}
+
+.categorySidebar{
+    max-height:98vh;
+    overflow: auto;
+    padding: 30px 25px;
+    position: fixed;
+    width:300px;
+    margin-bottom: 20px;
+
+}
+.categorySidebar li {
+    padding:10px 0px;
+    list-style:circle;
+
+}
+
+.menuarrow{
+    color: lightgray !important;
+    font-size: 16px !important;
+}
+
+.videoframe {
+    position: relative;
+    width: 100%;
+    padding-top:52%;
+    margin-bottom: 1.5rem;
+}
+
+.videoframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    padding:30px 30px 0px 30px;
+}
+.youtubetitle{
+    padding: 0px 30px;
+}
+.section_title {
+    color: #314AC4 !important;
+    padding: 10px 30px;
+}
+.blog_seperator {
+    width: 70px;
+    height: 1px;
+    background: #444;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 0px 30px;
+}
+
+.videodescription{
+    padding: 0px 30px;
+}
+
+.paper{
+    padding:30px 40px;
+    text-align:left;
+    color: #707070;
+
+}
+
+@media only screen and (max-width:960px) {
+    .lectures{
+        padding:10px 0px;
+    }
+
+    .videoframe {
+        position: relative;
+        width: 100%;
+        padding-top:50%;
+        margin-bottom: 1.5rem;
+    }
+
+    .videoframe iframe {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%;
+        padding:0px 0px;
+    }
+
+
+    .paper{
+        padding:10px 10px;
+        text-align:left;
+        color: #707070;
+
+    }
+}

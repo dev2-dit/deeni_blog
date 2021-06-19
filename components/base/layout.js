@@ -7,7 +7,9 @@ export default function Layout({ children }) {
     return (
         <>
             <Menubar />
-            <main className="viewport">{ children }</main>
+                <div className="topspace"/>
+                    <main className="viewport">{ children }</main>
+                <div className="bottom-space"/>
             <Footer />
         </>
     )

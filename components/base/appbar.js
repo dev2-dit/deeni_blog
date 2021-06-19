@@ -13,6 +13,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import React, {useState} from "react";
 import Drawer from '@material-ui/core/Drawer';
 import CloseIcon from '@material-ui/icons/Close';
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
+import Image from 'next/image'
 
 
 export default function TopAppBar() {
@@ -27,22 +29,30 @@ export default function TopAppBar() {
                     <Toolbar>
                         <Grid container spacing={3}>
                             <Grid item xs={4} style={{display:'flex'}}>
-                                <IconButton edge="start"  aria-label="menu" onClick={()=>setOpenDrawer(!openDrawer)}>
-                                    <MenuIcon className='icons' />
-                                </IconButton>
+                                {/*<IconButton edge="start"  aria-label="menu" onClick={()=>setOpenDrawer(!openDrawer)}>*/}
+                                {/*    <MenuIcon className='icons' />*/}
+                                {/*</IconButton>*/}
+
+                                <div className="off-canvas-toggle-cover d-none d-lg-inline-block mr-20" onClick={()=>setOpenDrawer(!openDrawer)}>
+                                    {openDrawer ? <CloseIcon style={{color:'black',fontSize:'32',fontWeight:'200',cursor:'pointer'}} onClick={()=>setOpenDrawer(!openDrawer)}/> :
+                                        <div className="off-canvas-toggle hidden d-inline-block" id="off-canvas-toggle">
+                                            <span style={{marginTop:'20px'}}></span>
+                                        </div>
+                                    }
+                                </div>
                                <div className='lg-menus' style={{display:'flex'}} >
                                    <Typography variant="body1" >
-                                       <Link href="/lecture">
+                                       <Link href="/lectures">
                                            <a className="menu-items">Lecture</a>
                                        </Link>
                                    </Typography>
                                    <Typography variant="body1" >
-                                       <Link href="/lecture">
+                                       <Link href="/books">
                                            <a className="menu-items">Book</a>
                                        </Link>
                                    </Typography>
                                    <Typography variant="body1" >
-                                       <Link href="/lecture">
+                                       <Link href="/articles">
                                            <a className="menu-items hiegh-lightedmenu">
                                                Blog
                                            </a>
@@ -50,11 +60,16 @@ export default function TopAppBar() {
                                    </Typography>
                                </div>
                             </Grid>
-                            <Grid item xs={4}>
-                                    <Typography variant='h3' align='center'>
-                                        <Link href="/"><a className="text-logo"> Athena </a></Link>
-                                    </Typography>
-                                    <Typography varient='body2' align='center' className="tagline ">Creative Magazine</Typography>
+                            <Grid item xs={4} align='center'>
+                                <Link href="/"><a>
+                                <Image
+                                    src="/demoimage/logo.png"
+                                    alt="blog_image"
+                                    width={110}
+                                    height={60}
+                                />
+                                    </a>
+                                </Link>
                             </Grid>
                             <Grid item xs={4}>
                                 <div style={{display:'flex',justifyContent:'flex-end'}}>
@@ -74,20 +89,21 @@ export default function TopAppBar() {
                     <CloseIcon style={{color:'#fff',fontSize:32,cursor:'pointer'}} onClick={()=>setOpenDrawer(!openDrawer)}/>
                     <div className="sidemenu-item">
                         <ul>
-                            <li><a href="">Blog<sup>235</sup></a></li>
-                            <li><a href="">Lifestyle<sup>186</sup></a></li>
-                            <li><a href="">Inspiration<sup>98</sup></a></li>
-                            <li><a href="">Healthy<sup>247</sup></a></li>
+                            <li><Link href="/"><a target="_blank">Blog<sup>235</sup></a></Link></li>
+                            <li><Link href="/"><a target="_blank">Lifestyle<sup>186</sup></a></Link></li>
+                            <li><Link href="/"><a target="_blank">Inspiration<sup>98</sup></a></Link></li>
+                            <li><Link href="/"><a target="_blank">Healthy<sup>247</sup></a></Link></li>
+                            <li><Link href="/contact"><a>Contact</a></Link></li>
                         </ul>
                     </div>
 
                     <div className="sidemenu-share">
                         <Typography variant='h5' className='text-white'>Follow</Typography>
                         <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Behance</a></li>
-                            <li><a href="#">Pinterest</a></li>
+                            <li><a href="#" target="_blank">Facebook</a></li>
+                            <li><a href="#" target="_blank">Instagram</a></li>
+                            <li><a href="#" target="_blank">Behance</a></li>
+                            <li><a href="#" target="_blank">Pinterest</a></li>
                         </ul>
                     </div>
 

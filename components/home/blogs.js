@@ -50,13 +50,13 @@ export default function Blogs() {
                                         />
                                     </CardMedia>
                                     <CardContent className={styles.card_content}>
-                                        <Link href="/lecture"><a>
+                                        <Link href="/articles"><a>
                                             <Typography variant="body2" className={styles.blog_tag}>
                                                 Lizards
                                             </Typography>
                                             </a>
                                         </Link>
-                                        <Link href="/lecture"><a>
+                                        <Link href="/articles"><a>
                                         <Typography component="h5" className={styles.blog_title}>
                                             Lizards are a widespread group of squamate reptiles,
                                         </Typography>

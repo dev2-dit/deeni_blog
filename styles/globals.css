@@ -10,19 +10,28 @@ body {
   font-family: 'Barlow',sans-serif !important;
   background-color: #FAFAFA;
 }
-
+.topspace{
+  margin-top:100px;
+}
+.bottom-space{
+  margin-bottom: 420px;
+}
 a {
   color: inherit;
   text-decoration: none;
 }
 a:hover{
-  color:#f50649 !important; ;
+  color: #4663AC !important; ;
 }
 
 * {
   box-sizing: border-box;
 }
 
+.active{
+  color:#314AC4 !important;
+  font-weight: bold;
+}
 
 .text-center{
   text-align: center;
@@ -48,7 +57,7 @@ li{list-style:none}
   position:absolute;
   background:none;
   border-radius:50%;
-  border:1px solid red;
+  border:1px solid #4663AC ;
 }
 .icons{
   color: black !important;
@@ -57,11 +66,16 @@ li{list-style:none}
 }
 
 .icons:hover{
-  color: #f50649 !important;
+  color: #4663AC !important;
 }
 
 
+/*meterial ui modification*/
 
+
+.MuiPaper-elevation1{
+  /*box-shadow: red !important;*/
+}
 
 .MuiTypography-h2{
   color: #000000 !important;
@@ -86,7 +100,18 @@ li{list-style:none}
 .MuiTypography-body2{
   font-size:0.75rem !important;
 }
-/*Footer Elements*/
+
+.MuiTypography-subtitle1{
+  font-size:1rem !important;
+}
+
+.MuiMenu-paper{
+  margin-top: 70px !important;
+}
+
+
+
+  /*Footer Elements*/
 
 
 
@@ -142,9 +167,7 @@ footer.fixed-footer{
   padding-top:40px;
 }
 
-.bottom-space{
-  margin-bottom: 420px;
-}
+
 
 /*Header elements*/
 
@@ -182,6 +205,7 @@ footer.fixed-footer{
 .mobile-menuicon-text{
   color: #1f1f1f !important;
   padding:18px 25px 15px 0px;
+  margin-top: 2px !important;
 }
 
 .MuiDrawer-paperAnchorTop{
@@ -240,24 +264,21 @@ footer.fixed-footer{
 }
 
 
-.leftsidebar::-webkit-scrollbar {
-  display: none;
+.MuiDrawer-paper::-webkit-scrollbar {
+  width: 5px;
+  background-color: #1F1F1F;
+}
+.MuiDrawer-paper::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-
-.leftsidebar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.MuiDrawer-paper::-webkit-scrollbar-thumb {
+  background: #888;
 }
-
 
 
 /*blog*/
 
-
-.firstblog-sec{
-  margin-top:100px;
-}
 .divider-separator {
   width: 70px;
   height: 1px;
@@ -269,7 +290,7 @@ footer.fixed-footer{
 }
 
 .section_subehading{
-  font-size:2.8rem !important;
+  font-size:2.125rem !important;
   padding:15px 0px !important;
   font-family: var(--font-primary) !important;
   font-weight: 500 !important;
@@ -295,17 +316,87 @@ footer.fixed-footer{
 .widget-header-2 h2{position:relative;font-size:1.3rem;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #eaecee;padding-bottom:20px;}
 .widget-header-2 h2::after{content:"";height:4px;width:50px;position:absolute;background:#000;bottom:-2px;left:0;}
 
+.button_contact{
+  background-color: #000 !important;
+  padding: 10px 25px !important;
+  margin-left:20px !important;
+  color: #fff !important;
+}
+
+
 
 @media (max-width: 600px) {
+  .MuiTypography-h2{
+    color: #000000 !important;
+    font-weight: 500 !important;
+  }
+  .MuiTypography-h3{
+    color: #000000 !important;
+    font-weight: 500 !important;
+    font-size: 2.25rem !important;
+  }
+  .MuiTypography-h4{
+    color: #000000 !important;
+    font-weight: 500 !important;
+  }
+  .MuiTypography-h5{
+    color: #000000 !important;
+    font-weight: 500 !important;
+  }
+  .MuiTypography-body1{
+    font-weight: 500 !important;
+  }
+  .MuiTypography-body2{
+    font-size:0.75rem !important;
+  }
+
+
+  .MuiMenu-paper{
+    margin-top: 70px !important;
+  }
+
+  .MuiTypography-subtitle1{
+    font-size:0.85rem !important;
+  }
   footer.fixed-footer{
     position:fixed;
     bottom:0;
     left:0;
     z-index:-1;
     width:100%;
-    max-height:85vh;
+    max-height:80vh;
   }
   .bottom-space{
     margin-bottom: 85vh;
   }
+  .view-more{
+    display: none;
+  }
+}
+
+.off-canvas-toggle span{position:relative;width:29px;background:none;height:1px;display:inherit;}
+.off-canvas-toggle span::before,
+.off-canvas-toggle span::after{background:#000;display:inherit;height:1px;}
+.off-canvas-toggle span::before,
+.off-canvas-toggle span::after{content:"";left:0;position:absolute;right:0;}
+.off-canvas-toggle span::before{top:-10px;width:100%;}
+.off-canvas-toggle span::after{top:0;width:100%;}
+.off-canvas-toggle p{display:inline;font-size:12px;margin:0 0 0 5px;}
+.off-canvas-toggle-cover{text-align:right;
+margin-top: 20px;
+padding: 0px 20px 0px 5px;
+cursor: pointer;
+}
+
+.lecture_page footer{
+  display: none;
+}
+.lecture_page bottom-space{
+  margin-bottom:0vh !important;
+}
+
+.image {
+  object-fit: contain;
+  width: 100% !important;
+  height: unset !important;
 }

@@ -18,9 +18,10 @@ export default function Blog4() {
         <>
 
                 <div className={styles.home_blogslatest}>
+                    <div className={styles.white_box_content}>
                     <Container>
                     <Grid container spacing={3}>
-                        <Grid item xs={12} md={7}>
+                        <Grid item xs={12} md={8}>
                             <Typography variant="body1" className={styles.section_title}>
                                 <span className={styles.blog_seperator}/>Travel
                             </Typography>
@@ -40,7 +41,7 @@ export default function Blog4() {
                                                 src="/demoimage/1000x753.png"
                                                 alt="blog_image"
                                                 width={350}
-                                                height={320}
+                                                height={300}
                                             />
                                         </CardMedia>
                                     </Grid>
@@ -77,7 +78,7 @@ export default function Blog4() {
                                                 src="/demoimage/1000x753.png"
                                                 alt="blog_image"
                                                 width={350}
-                                                height={320}
+                                                height={300}
                                             />
                                         </CardMedia>
                                     </Grid>
@@ -105,7 +106,7 @@ export default function Blog4() {
 
 
                         </Grid>
-                        <Grid item xs={12} md={5}>
+                        <Grid item xs={12} md={4}>
                             <div className="view-more text-right mt-30">
                                 <Button variant="outlined" className='btn'>View More</Button>
                             </div>
@@ -113,6 +114,7 @@ export default function Blog4() {
                         </Grid>
                     </Grid>
                     </Container>
+                    </div>
                 </div>
         </>
     );

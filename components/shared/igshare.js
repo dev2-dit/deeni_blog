@@ -11,6 +11,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 export default function Share(){
     return(
         <>
+            <Container>
             <div className={styles.sharesection}>
             <Grid container spacing={0}>
                 <Grid item xs={12}>
@@ -21,7 +22,7 @@ export default function Share(){
                         </Typography>
 
                     </div>
-                    <Typography variant="h5" align='center' className={styles.section_title}>
+                    <Typography variant="h5" align='center' className={styles.section_titles}>
                         Follow Me On Instagram
                     </Typography>
                 </Grid>
@@ -78,9 +79,8 @@ export default function Share(){
             </Grid>
 
             </div>
+            </Container>
 
-
-            <div className='bottom-space'></div>
         </>
     )
 }
