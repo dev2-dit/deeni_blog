@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import styles from '../../styles/Home.module.css';
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Button from "@material-ui/core/Button";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
@@ -35,9 +36,11 @@ export default function Banner() {
                         <Button variant="outlined" className={styles.banner_button_about}>
                             About
                         </Button>
+                        <Link href="contact"><a>
                         <Button variant="outlined" color="primary" className={styles.banner_button_contact}>
                              Contact
                         </Button>
+                        </a></Link>
 
                     </Grid>
                 </Grid>
