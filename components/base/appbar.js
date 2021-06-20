@@ -89,11 +89,30 @@ export default function TopAppBar() {
                     <CloseIcon style={{color:'#fff',fontSize:32,cursor:'pointer'}} onClick={()=>setOpenDrawer(!openDrawer)}/>
                     <div className="sidemenu-item">
                         <ul>
-                            <li><Link href="/"><a target="_blank">Blog<sup>235</sup></a></Link></li>
-                            <li><Link href="/"><a target="_blank">Lifestyle<sup>186</sup></a></Link></li>
-                            <li><Link href="/"><a target="_blank">Inspiration<sup>98</sup></a></Link></li>
-                            <li><Link href="/"><a target="_blank">Healthy<sup>247</sup></a></Link></li>
+
+                            <li>
+                                <Link href="/lectures">
+                                    <a >Lecture</a>
+                                </Link>
+                            </li>
+                            <li>
+
+                                <Link href="/books">
+                                    <a>Book</a>
+                                </Link>
+
+                            </li>
+                            <li>
+                                <Link href="/articles">
+                                    <a>
+                                        Blog
+                                    </a>
+                                </Link>
+                            </li>
+
                             <li><Link href="/contact"><a>Contact</a></Link></li>
+
+                            <li><Link href="/"><a target="_blank">Healthy<sup>247</sup></a></Link></li>
                         </ul>
                     </div>
 
@@ -103,13 +122,11 @@ export default function TopAppBar() {
                             <li><a href="#" target="_blank">Facebook</a></li>
                             <li><a href="#" target="_blank">Instagram</a></li>
                             <li><a href="#" target="_blank">Behance</a></li>
-                            <li><a href="#" target="_blank">Pinterest</a></li>
                         </ul>
                     </div>
 
                     <div className="sidemenu-share">
                         <ul>
-                            <li><a href="#" className="text-muted">ATHENA MAGAZINE</a></li>
                             <li><a href="#" className="text-muted">123 Main Street</a></li>
                             <li><a href="#" className="text-muted">New York, NY 10001</a></li>
                         </ul>

@@ -63,7 +63,7 @@ export default function Lectures({ lectures,lecturecategories }) {
                         </Grid>
                         <Grid item xs={12} md={9}>
                             <Typography variant="h4" style={{padding:'10px 0px 10px 15px'}}>
-                                {state.filter ? state.filter : "Video Categories" }
+                                {state.filter ? state.filter : "All Categories" }
                             </Typography>
                             <Grid container spacing={0}>
                                 <Alllecturelist lecturelist={state.lectures}/>

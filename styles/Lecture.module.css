@@ -11,11 +11,17 @@
     margin-bottom: 20px;
 
 }
-.categorySidebar li {
-    padding:10px 0px;
-    list-style:circle;
 
+.categorySidebar li::before {
+    padding:10px 0px;
+    content: "\2022";
+    color: gray;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
+
 
 .menuarrow{
     color: lightgray !important;

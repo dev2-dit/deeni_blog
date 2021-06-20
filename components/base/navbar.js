@@ -15,6 +15,7 @@ import AppBar from "@material-ui/core/AppBar";
 import {Grid} from "@material-ui/core";
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import Image from "next/image";
+import CloseIcon from "@material-ui/icons/Close";
 
 
 
@@ -69,27 +70,58 @@ export default function Navbar() {
 
                 </Container>
         </AppBar>
-            <div className='mobilemenuitems'>
-            <Drawer anchor='top' open={openDrawer} onClose={()=>setOpenDrawer(false)} className={classes.root}>
-                    <List>
-                        <ListItem button>
-                            <Link href="/lectures">
-                                <a className="menu-items">Lecture</a>
-                            </Link>
-                        </ListItem>
-                        <ListItem button>
-                            <Link href="/books">
-                                <a className="menu-items">Book</a>
-                            </Link>
-                        </ListItem>
-                        <ListItem button>
-                            <Link href="/articles">
-                                <a className="menu-items">Article</a>
-                            </Link>
-                        </ListItem>
-                    </List>
+            <Drawer anchor='left' open={openDrawer} onClose={()=>setOpenDrawer(false)} >
+                <div className='leftsidebar'>
+                    <CloseIcon style={{color:'#fff',fontSize:32,cursor:'pointer'}} onClick={()=>setOpenDrawer(!openDrawer)}/>
+                    <div className="sidemenu-item">
+                        <ul>
+
+                            <li>
+                                <Link href="/lectures">
+                                    <a >Lecture</a>
+                                </Link>
+                            </li>
+                            <li>
+
+                                <Link href="/books">
+                                    <a>Book</a>
+                                </Link>
+
+                            </li>
+                            <li>
+                                <Link href="/articles">
+                                    <a>
+                                        Blog
+                                    </a>
+                                </Link>
+                            </li>
+
+                            <li><Link href="/contact"><a>Contact</a></Link></li>
+
+                            <li><Link href="/"><a target="_blank">Healthy<sup>247</sup></a></Link></li>
+                        </ul>
+                    </div>
+
+                    <div className="sidemenu-share">
+                        <Typography variant='h5' className='text-white'>Follow</Typography>
+                        <ul>
+                            <li><a href="#" target="_blank">Facebook</a></li>
+                            <li><a href="#" target="_blank">Instagram</a></li>
+                            <li><a href="#" target="_blank">Behance</a></li>
+                            <li><a href="#" target="_blank">Pinterest</a></li>
+                        </ul>
+                    </div>
+
+                    <div className="sidemenu-share">
+                        <ul>
+                            <li><a href="#" className="text-muted">ATHENA MAGAZINE</a></li>
+                            <li><a href="#" className="text-muted">123 Main Street</a></li>
+                            <li><a href="#" className="text-muted">New York, NY 10001</a></li>
+                        </ul>
+                    </div>
+
+                </div>
             </Drawer>
-            </div>
 
         </>
     )

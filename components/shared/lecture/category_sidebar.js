@@ -53,6 +53,7 @@ export default function Categorysidebar(props){
                         keepMounted
                         open={Boolean(anchorEl)}
                         onClose={handleClose}
+                       className={styles.menuitem}
                     >
 
                         { category.map((c,i) =>
@@ -71,7 +72,7 @@ export default function Categorysidebar(props){
 
                 :
             <div className={styles.categorySidebar}>
-            <Typography variant="h5" >
+            <Typography variant="h5" style={{marginLeft:'-17px'}} >
                 Lecture Categories
             </Typography>
             <ul>
