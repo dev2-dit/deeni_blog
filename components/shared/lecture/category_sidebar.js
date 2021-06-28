@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 const useStyles = makeStyles({
@@ -25,16 +26,15 @@ export default function Categorysidebar(props){
     const theme = useTheme();
     const isMatches = useMediaQuery(theme.breakpoints.down('sm'));
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorEl, setAnchorEl] = React.useState(false);
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
 
     const handleClose = () => {
-        setAnchorEl(null);
+        setAnchorEl(false);
     };
-
 
     return(
 
@@ -43,9 +43,14 @@ export default function Categorysidebar(props){
             {isMatches ?
 
                 <div>
-
                     <Button aria-controls="category-menu" aria-haspopup="true" onClick={handleClick}>
-                        <ArrowForwardIosIcon className={styles.menuarrow}/> Categories
+                        {
+                            anchorEl ? <ExpandMoreIcon className={styles.menuarrow} /> : <ArrowForwardIosIcon className={styles.menuarrow}/>
+
+                        }
+                        Categories
+
+
                     </Button>
                     <Menu
                         id="category-menu"

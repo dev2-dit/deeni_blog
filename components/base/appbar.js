@@ -117,7 +117,7 @@ export default function TopAppBar() {
                     </div>
 
                     <div className="sidemenu-share">
-                        <Typography variant='h5' className='text-white'>Follow</Typography>
+                        <Typography variant='h6' className='text-white'>Follow</Typography>
                         <ul>
                             <li><a href="#" target="_blank">Facebook</a></li>
                             <li><a href="#" target="_blank">Instagram</a></li>
