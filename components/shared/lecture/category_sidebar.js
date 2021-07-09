@@ -40,9 +40,9 @@ export default function Categorysidebar(props){
 
 
         <>
-            {isMatches ?
 
-                <div>
+
+                <div className="web-none">
                     <Button aria-controls="category-menu" aria-haspopup="true" onClick={handleClick}>
                         {
                             anchorEl ? <ExpandMoreIcon className={styles.menuarrow} /> : <ArrowForwardIosIcon className={styles.menuarrow}/>
@@ -75,9 +75,10 @@ export default function Categorysidebar(props){
                     </Menu>
                 </div>
 
-                :
+
+                <div className="mobile-none">
             <div className={styles.categorySidebar}>
-            <Typography variant="h5" style={{marginLeft:'-17px'}} >
+            <Typography variant="h5" style={{marginLeft:'-17px'}}  className="mobile-none">
                 Lecture Categories
             </Typography>
             <ul>
@@ -94,7 +95,8 @@ export default function Categorysidebar(props){
                 }
             </ul>
         </div>
-            }
+                </div>
+
         </>
     )
 }

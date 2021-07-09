@@ -329,7 +329,9 @@ footer.fixed-footer{
   color: #fff !important;
 }
 
-
+.web-none{
+  display: none;
+}
 
 @media (max-width: 600px) {
   .MuiTypography-h2{
@@ -378,7 +380,15 @@ footer.fixed-footer{
   .view-more{
     display: none;
   }
+  .mobile-none{
+    display: none;
+  }
+  .web-none{
+    display: block;
+  }
 }
+
+
 
 .off-canvas-toggle span{position:relative;width:29px;background:none;height:1px;display:inherit;}
 .off-canvas-toggle span::before,

@@ -72,12 +72,12 @@ export default function TopAppBar() {
                                 </Link>
                             </Grid>
                             <Grid item xs={4}>
-                                {/*<div style={{display:'flex',justifyContent:'flex-end'}}>*/}
-                                {/*        <FacebookIcon className='icons menu-icons'/>*/}
-                                {/*        <InstagramIcon className='icons menu-icons'/>*/}
-                                {/*        <TwitterIcon className='icons menu-icons'/>*/}
-                                {/*        <SearchIcon className='icons menu-icons' />*/}
-                                {/*</div>*/}
+                                <div style={{display:'flex',justifyContent:'flex-end'}}>
+                                        <FacebookIcon className='icons menu-icons'/>
+                                        <InstagramIcon className='icons menu-icons'/>
+                                        <TwitterIcon className='icons menu-icons'/>
+                                        <SearchIcon className='icons menu-icons' />
+                                </div>
                             </Grid>
                         </Grid>
                    </Toolbar>
