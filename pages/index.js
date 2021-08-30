@@ -10,6 +10,7 @@ import Organizations from  '../components/home/home_organizations'
 import Homebook from  '../components/home/home_book'
 import Banner from  '../components/home/banner'
 
+
 export default function Home() {
   return (
       <Layout>
